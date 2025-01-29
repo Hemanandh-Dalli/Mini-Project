@@ -1,0 +1,61 @@
+Segment 2: UI & Interaction
+This segment focuses on rendering game elements, user interaction, and managing different game states.
+
+1. draw_grid()
+Purpose: Draws the grid on the game window.
+Functionality:
+Uses pygame.draw.line() to create vertical and horizontal grid lines.
+Helps players visualize movement within the game space.
+2. draw_snake(positions, color)
+Purpose: Draws the snake on the screen.
+Functionality:
+Loops through each segment of the snake and renders it.
+Colors the snake’s head and body differently.
+Draws eyes on the head for better visibility.
+3. draw_food()
+Purpose: Draws the food on the screen.
+Functionality:
+Creates a small square at the food_position.
+Colors it red to distinguish it from the snake.
+4. draw_button(text, x, y, width, height, color, hover_color, action=None)
+Purpose: Renders an interactive button.
+Functionality:
+Checks if the mouse is hovering over the button.
+Changes color on hover.
+Executes an assigned action if clicked.
+5. main_menu()
+Purpose: Displays the main menu where players choose game modes.
+Functionality:
+Shows options for single-player, multiplayer, challenge modes, and high scores.
+Uses draw_button() for menu interactions.
+Waits for user input before proceeding.
+6. game_loop()
+Purpose: Runs the main game logic.
+Functionality:
+Handles user input (movement, pause, exit).
+Moves the snake and checks for collisions.
+Updates the game screen.
+Displays scores and challenge status if applicable.
+7. game_over()
+Purpose: Displays the game-over screen when a player loses.
+Functionality:
+Shows a “Game Over” message.
+Provides options to restart or exit.
+Waits for player input before proceeding.
+8. challenge_complete()
+Purpose: Displays a victory screen when a challenge is completed.
+Functionality:
+Shows a “You Won!” message.
+Provides options to start a new challenge or exit.
+Waits for player input before proceeding.
+9. challenge_incomplete()
+Purpose: Displays a failure screen if the challenge goal is not met in time.
+Functionality:
+Shows a “You Lose!” message.
+Provides options to retry or exit.
+Waits for player input before proceeding.
+10. show_high_scores_screen()
+Purpose: Displays the high scores leaderboard.
+Functionality:
+Lists the top scores.
+Provides an option to return to the main menu.
