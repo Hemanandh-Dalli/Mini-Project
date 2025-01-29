@@ -1,0 +1,44 @@
+Segment 1: Game Logic & State Management
+This segment focuses on managing the game’s logic, including snake movement, collision detection, game resets, score management, and challenge settings.
+
+1. get_random_position()
+Purpose: Generates a random position on the grid for placing the food.
+Functionality:
+Uses random.randrange() to select an (x, y) coordinate within the game window.
+Ensures that the position aligns with the grid system to maintain consistency.
+2. move_snake(index)
+Purpose: Moves the snake in the current direction.
+Functionality:
+Retrieves the head position of the snake.
+Computes the new head position based on the direction.
+Adds the new head position to the front of the snake.
+If the snake eats food, the score increases; otherwise, the tail is removed.
+3. check_collision()
+Purpose: Checks if the snake collides with itself.
+Functionality:
+Iterates through each snake’s body.
+If the head position appears in the body list, a collision is detected.
+Returns True if a collision occurs; otherwise, returns False.
+4. restart_game()
+Purpose: Resets the game state to start a new game.
+Functionality:
+Resets the snake’s starting positions.
+Generates a new food position.
+Resets scores and movement directions.
+Resets the game timer.
+5. load_high_scores()
+Purpose: Loads the high scores from a JSON file.
+Functionality:
+Reads the high_scores.json file.
+Parses and loads the data into the high_scores list.
+If the file is missing, initializes an empty list.
+6. save_high_scores()
+Purpose: Saves the high scores to a JSON file.
+Functionality:
+Writes the high_scores list into high_scores.json.
+Uses json.dump() to store the scores persistently.
+7. set_random_challenge()
+Purpose: Sets up a randomized challenge mode.
+Functionality:
+Randomly assigns a goal (number of points to achieve).
+Randomly assigns a time limit within which the goal must be reached.
